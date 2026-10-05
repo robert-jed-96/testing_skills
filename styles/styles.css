@@ -1,0 +1,256 @@
+/* Normalization */
+
+:root {
+    --bg: #F5F2E9;
+    --accent: #173E32;
+    --text1: #F0DFC9;
+    --text2: #A4492D;
+    --muted: #adadad;
+    --gutter: clamp(16px, 5vw, 64px);
+}
+
+*,
+*::before,
+*::after {box-sizing: border-box;}
+
+body,
+h1,
+h3,
+p,
+ul {margin: 0;}
+
+ul {list-style: none; padding: 0;}
+
+a {color: inherit; text-decoration: none;}
+
+body {
+    background: var(--bg);
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    line-height: 1.15;
+    box-sizing: border-box;
+}
+
+.logo {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0 0 1rem;
+}
+
+p:last-of-type {
+    margin: 0;
+}
+
+.nav {
+    padding: 0;
+
+}
+
+/* --- Global Resets & Typography --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg); /* Cream background */
+    color: var(--accent); /* Dark Forest Green font */
+    padding: 0 40px;
+}
+
+/* --- Navigation Bar --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0;
+    
+}
+
+.logo {
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 134px;
+    height: 34px;
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: auto;
+    letter-spacing: 0%;
+    color: var(--accent);
+    justify-content: left;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--accent);
+    margin: 0 16px;
+    font-weight: 500;
+    font-size: 15px;
+    font-family: "Source Sans 3", sans-serif;
+}
+
+.nav__links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 2px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s ease;
+}
+
+.nav__links a:hover,
+
+.nav__links a:hover::after,
+
+.btn-primary {
+    background-color: var(--accent);
+    color: var(--bg);
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+    font-family: "Source Sans 3", sans-serif;
+    transition: opacity 0.2s;
+}
+
+.btn-primary:hover {
+    opacity: 0.9;
+}
+
+/* --- Hero Section Layout --- */
+.hero-container {
+    display: flex;
+    min-height: 550px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+/* Left Panel Style */
+.hero-content {
+  background-color: var(--accent); /* Deep green panel */
+  color: #ffffff;
+  flex: 1;
+  padding: 60px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tagline {
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  opacity: 0.8;
+  margin-bottom: 24px;
+}
+
+.hero-content h1 {
+  font-size: 54px;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  font-weight: 700;
+}
+
+.description {
+  font-size: 18px;
+  line-height: 1.5;
+  opacity: 0.9;
+  margin-bottom: 40px;
+  max-width: 450px;
+}
+
+.btn-secondary {
+  background-color: #ffffff;
+  color: var(--accent);
+  padding: 16px 32px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  width: max-content;
+  margin-bottom: 20px;
+}
+
+.subtext {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* Right Panel Style */
+.hero-image {
+  flex: 1;
+  height: 600px;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures image fills space cleanly */
+  display: block;
+}
+
+/* --- Features Bar --- */
+.features-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0;
+  margin-top: 20px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.feature-icon {
+  font-size: 20px;
+}
+
+/* --- Responsive Adjustments for Mobile --- */
+@media (max-width: 900px) {
+  body {
+    padding: 0 20px;
+  }
+  
+  .navbar .nav-links {
+    display: none; /* Hide default nav items on small screens */
+  }
+
+  .hero-container {
+    flex-direction: column; /* Stack vertically */
+  }
+
+  .hero-content {
+    padding: 40px 24px;
+  }
+  
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .features-bar {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 320px) {
+
+}
